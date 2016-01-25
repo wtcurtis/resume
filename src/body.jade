@@ -27,9 +27,6 @@ html
                         li
                             i(class=cssClass)
                             span #{pair[0]}
-            - var eduConfig = {notesField: 'summary', titleField: ['studyType', 'area']};
-
-            != renderSection(r, 'education.history', 'Education', eduConfig)
             -
                 var empConf = {
                     headerField: 'employer',
@@ -37,4 +34,8 @@ html
                 };
 
             != renderSection(r, 'employment.history', 'Employment', empConf)
+
+            - var eduConfig = {notesField: 'summary', titleField: ['studyType', 'area']};
+
+            != renderSection(r, 'education.history', 'Education', eduConfig)
 

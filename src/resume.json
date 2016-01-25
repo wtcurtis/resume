@@ -52,6 +52,20 @@
           "Built and released 4 products for general release (3 PHP, 1 C#)",
           "Performed system administration on all Linux servers (local, and on EC2)"
         ]
+      },
+      {
+        "employer": "Roosters",
+        "position": "Server",
+        "start": "2007-12",
+        "end": "2010-11",
+        "location": "Layton, UT"
+      },
+      {
+        "employer": "Famous Dave's",
+        "position": "Server / Bartender",
+        "start": "2004-12",
+        "end": "2007-12",
+        "location": "Layton, UT"
       }
     ]
   },
