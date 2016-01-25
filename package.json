@@ -1,0 +1,27 @@
+{
+  "name": "jsonresume-theme-awesomecv",
+  "description": "Port of awesome-cv from LaTeX to HTML",
+  "license": "MIT",
+  "version": "0.0.1",
+  "main": "index.js",
+  "devDependencies": {
+    "run-sequence": "latest",
+    "node-sass": ">= 3.4.2",
+    "gulp": "latest",
+    "gulp-sass": "latest",
+    "del": "latest"
+  },
+  "dependencies": {
+    "jsonresume-themeutils": "latest",
+    "jade": "latest",
+    "lodash": "latest",
+    "lodash.get": "latest"
+  },
+  "configs": {
+    "directories": {
+      "dist": "jsonresume-theme-awesomecv",
+      "src": "src"
+    },
+    "resume": "./src/resume.json"
+  }
+}

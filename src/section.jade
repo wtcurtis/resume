@@ -1,0 +1,23 @@
+div.sectionContainer
+    - var split = [sectionHeader.substring(0, 3), sectionHeader.substring(3)];
+    h2
+        span.highlight #{split[0]}
+        span #{split[1]}
+    each el in sectionEls
+        div.section
+            div.sectionTop
+                div.sectionLeft
+                    h4 #{extract(el, headerField)}
+                    span.title #{extract(el, titleField, ' - ')}
+                div.sectionRight
+                    - var location = extract(el, locationField);
+                    if location
+                        span.location #{location}
+                    - var dateSum = getDateSummary(el.start, el.end);
+                    if dateSum
+                        span.date !{dateSum}
+            div.sectionMain
+                ul.notes
+                    each note in el.notes
+                        li #{note}
+

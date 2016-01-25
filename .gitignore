@@ -1,0 +1,4 @@
+dist/*
+.idea/*
+jsonresume-theme-awesomecv/*
+node_modules/*

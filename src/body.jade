@@ -1,0 +1,40 @@
+doctype html
+html
+    head
+       meta(charset='UTF-8')
+       title #{r.name}
+       link(href='https://fonts.googleapis.com/css?family=Roboto:400,100,100italic,300italic,300,400italic,700' rel='stylesheet' type='text/css')
+       link(href='https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css' rel='stylesheet')
+       link(href="awesome.css" rel="stylesheet")
+    body
+        div(id='main')
+            header
+                - var splitName = getSplitName(r.name)
+                h1
+                    span.thin #{splitName[0]}
+                    span #{splitName[1]}
+                - var label = _.get(r, 'info.label');
+                if label
+                    h4 #{label}
+                - var locationElements = buildLocationEls(r);
+                if locationElements.length
+                    ul.location
+                        each el in locationElements
+                            li.locationEl #{el}
+                ul.contact
+                    each pair in getContactValues(r)
+                        - var cssClass = "fa " + pair[1];
+                        li
+                            i(class=cssClass)
+                            span #{pair[0]}
+            - var eduConfig = {notesField: 'summary', titleField: ['studyType', 'area']};
+
+            != renderSection(r, 'education.history', 'Education', eduConfig)
+            -
+                var empConf = {
+                    headerField: 'employer',
+                    titleField: 'position'
+                };
+
+            != renderSection(r, 'employment.history', 'Employment', empConf)
+
