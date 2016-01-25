@@ -14,7 +14,7 @@ gulp.task('copyAll', function(done) {
 
 var runSequence = require('run-sequence');
 gulp.task('default', function(done) {
-    runSequence('clean', 'copyAll', 'sass', 'resume', done);
+    runSequence('clean', 'sass', 'resume', done);
 });
 
 var del = require('del');
@@ -38,7 +38,7 @@ function copyType(files, inType, outType) {
 var sass = require('gulp-sass');
 function buildSass() {
     var base = dirs.src + '/sass';
-    gulp.src(path.join(base, '/*.scss'), {base: base})
+    return gulp.src(path.join(base, '/*.scss'), {base: base})
         .pipe(sass().on('error', sass.logError))
         .pipe(gulp.dest(dirs.dist));
 }

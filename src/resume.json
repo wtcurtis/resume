@@ -31,9 +31,10 @@
         "location": "Draper, UT",
         "keywords": [],
         "highlights": [
-          "PHP: Built the system responsible for all commission payouts. Includes multiple per-person accounts, arbitrarily configurable output to financial services, robust permissions, and full auditabilty.",
-          "PHP: The modular design of the above allowed the core transactional / account code to be re-used to build a Gift Card system.",
-          "C#: Wrote a massively configurable commission rules system. Intended to create custom commission payouts for clients with little to no development in the smallest amount of time possible. Cut average commission rules system developer hours from 40 to 8."
+          "Main project was an E-Commerce system for MLM companies extending Magento and Wordpress",
+          "Built and maintained the system that built client instances, from signup and initial billing to server deployment on Digital Ocean",
+          "Built the system responsible for all commission payouts. Includes multiple per-person accounts, arbitrarily configurable output to financial services, robust permissions, and full auditabilty.",
+          "The modular design of the above allowed the core transactional / account code to be re-used to build a Gift Card system."
         ]
       },
       {
@@ -49,6 +50,8 @@
         "highlights": [
           "Lead a team of 5 developers",
           "Responsible for requirements gathering, system architecture, client support, and implementation",
+          "Team performed most client work using PHP, MySQL, and SugarCRM.",
+          "Personally responsible for all C# and Java projects",
           "Built and released 4 products for general release (3 PHP, 1 C#)",
           "Performed system administration on all Linux servers (local, and on EC2)"
         ]
@@ -76,7 +79,7 @@
         "institution": "University of Utah (S.J. Quinney School of Law)",
         "start": "2007-09",
         "end": "2010-05",
-        "summary": "",
+        "summary": "CALI Excellence awards (best grade in class) in Constitutional Law and Patent Law",
         "studyType": "J.D.",
         "location": "Salt Lake City, UT"
       },

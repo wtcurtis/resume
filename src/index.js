@@ -117,15 +117,24 @@ var renderSection = function(resume, elPath, header, conf) {
     return jade.renderFile(path.join(__dirname, 'section.jade'), conf);
 };
 
+function renderHeader(r) {
+    var conf = {
+        buildLocationEls: buildLocationEls,
+        getContactValues: getContactValues,
+        getSplitName: getSplitName,
+        r: r,
+        _: _
+    };
+
+    return jade.renderFile(path.join(__dirname, 'header.jade'), conf);
+}
+
 function render(r) {
-    console.log('render');
     var data = {
         r: r,
         _: _,
         renderSection: renderSection,
-        buildLocationEls: buildLocationEls,
-        getContactValues: getContactValues,
-        getSplitName: getSplitName
+        renderHeader: renderHeader
     };
 
     return jade.renderFile(path.join(__dirname, 'body.jade'), data);
