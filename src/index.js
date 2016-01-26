@@ -4,7 +4,7 @@ var path = require('path');
 var utils = require('jsonresume-themeutils');
 
 var mapSocial = function(r) {
-    var val =  _(r.social)
+    return _(r.social)
         .map(function(s) {
             if(!s.network) return false;
             return s.network && [s.network.toLowerCase(), s];
@@ -12,9 +12,6 @@ var mapSocial = function(r) {
         .filter()
         .fromPairs()
         .value();
-
-    console.log(val);
-    return val;
 };
 
 var getContactValues = function(r) {
@@ -24,8 +21,6 @@ var getContactValues = function(r) {
         .map(pair => {
             var value = _.get(r, pair[0]);
             var icon = pair[1];
-
-            console.log(value, icon);
 
             if(!value || !icon) return false;
 
@@ -51,6 +46,43 @@ var buildLocationEls = function(r) {
         .value();
 };
 
+/**
+ * Wrap first letter of each word in a span with a particular
+ * class, rest of words with another
+ * @returns {string}
+ */
+var splitFirstEach = function(phrase, letterClass, wordClass) {
+    letterClass = letterClass || 'large';
+    wordClass = wordClass || 'small';
+
+    var spanify = (w, className) =>
+        '<span class="' + className + '">' + w + '</span>';
+
+    return _(phrase.trim().split(/( |\.)/))
+        // Collect pairs, (word, capture)
+        .reduce((arr, el) => {
+            var last = arr.length-1;
+            if(arr[last].length < 2) arr[last].push(el);
+            else arr.push([el]);
+
+            return arr;
+        }, [[]])
+        .map(capture => {
+            var w = capture[0];
+            var split = capture[1];
+            if(split) w += split;
+
+            return spanify(w.substring(0, 1), letterClass) +
+                spanify(w.substring(1), wordClass)
+        })
+        .join('');
+};
+
+/**
+ * Split name into [all but last,  last] components
+ * @param name string
+ * @returns string[]
+ */
 var getSplitName = name => {
     var split = _(name.split(' '))
         .map(n => n.trim())
@@ -59,13 +91,10 @@ var getSplitName = name => {
 
     if(split.length === 1) return ['', name];
 
-    var val = [
+    return [
         split.slice(0, -1).join(' ') + ' ',
-        split.slice(-1)[0]];
-
-    console.log(val);
-
-    return val;
+        split.slice(-1)[0]
+    ];
 };
 
 var getDateSummary = function(start, end) {
@@ -84,7 +113,11 @@ var renderSection = function(resume, elPath, header, conf) {
         titleField: 'title',
         notesField: 'highlights',
         locationField: 'location',
+        titleSep: ' - ',
+        sectionClass: '',
+        sectionLeftClass: '',
         getDateSummary: getDateSummary,
+        splitFirstEach: splitFirstEach,
         _: _
     };
 
@@ -105,9 +138,12 @@ var renderSection = function(resume, elPath, header, conf) {
         if(!field) return '';
         if(typeof field === 'string') return _.get(el, field);
 
+        console.log(el);
+
         return _(field)
-            .map(f => _.get(el, f, '').trim())
-            .filter(v => v.length > 0)
+            .map(f => _.get(el, f, ''))
+            .flatten()
+            .filter(v => v.trim().length > 0)
             .value()
             .join(sep || ' ');
     };

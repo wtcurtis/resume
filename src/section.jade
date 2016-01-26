@@ -1,14 +1,16 @@
 div.sectionContainer
     - var split = [sectionHeader.substring(0, 3), sectionHeader.substring(3)];
+    - var secLeftClass = 'sectionLeft ' + sectionLeftClass
+    - var secClass = 'section ' + sectionClass
     h2
         span.highlight #{split[0]}
         span #{split[1]}
     each el in sectionEls
-        div.section
+        div(class=secClass)
             div.sectionTop
-                div.sectionLeft
+                div(class=secLeftClass)
                     h4 #{extract(el, headerField)}
-                    span.title #{extract(el, titleField, ' - ')}
+                    span.title !{splitFirstEach(extract(el, titleField, titleSep || ' - '))}
                 div.sectionRight
                     - var location = extract(el, locationField);
                     if location

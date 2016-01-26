@@ -1,5 +1,9 @@
 
 $highlight: #c70000;
+$defaultFontSize: 12px;
+$accentFontSize: 16px;
+$mediumFontSize: 24px;
+$hugeFontSize: 48px;
 //$highlight: #4b68ff;
 
 body {
@@ -9,7 +13,7 @@ body {
 body * {
   margin: 0;
   padding: 0;
-  font-size: 12px;
+  font-size: $defaultFontSize;
 }
 
 #main {
@@ -29,7 +33,9 @@ header {
   text-align: center;
 
   h1 {
-    * { font-size: 48px };
+    * {
+      font-size: $hugeFontSize;
+    }
     .thin {
       font-weight: 100;
     }
@@ -43,7 +49,7 @@ header {
   ul.location {
     color: #888;
     font-style: italic;
-    font-weight: 300;
+    font-weight: 400;
 
     li { padding-right: 5px; }
   }
@@ -54,7 +60,7 @@ header {
       padding-right: 10px;
 
       &:not(:last-child) {
-        border-right: 1px solid black;
+        border-right: 1.5px solid black;
       }
 
       span { margin-left: 4px; }
@@ -72,10 +78,10 @@ header {
     position: absolute;
     top: -23px;
     padding-right: 4px;
-    font-size: 24px;
+    font-size: $mediumFontSize;
 
     span {
-      font-size: 24px;
+      font-size: $mediumFontSize;
     }
 
     .highlight {
@@ -84,34 +90,46 @@ header {
   }
 
   .section {
-    padding-top: 10px;
-    margin-top: 6px;
+    padding-top: 7px;
+    margin-top: 8px;
+
+    &.condensed {
+      margin-top: 0;
+    }
 
     &:first-of-type {
-      border-top: 2px solid black;
+      border-top: 1.5px solid black;
     }
 
     .sectionTop {
-      margin-bottom: 5px;
-
       .sectionLeft {
         float: left;
         width: 70%;
 
-        h4 {
-          font-size: 16px;
-        }
+        &.full-width {
+          width: 100%;
 
-        .title {
-          text-transform: uppercase;
-          font-weight: 300;
-          line-height: 20px;
-
-          &:first-letter {
-            font-size: 16px;
+          .title span {
+            font-family: inherit;
+            font-weight: 400;
           }
         }
 
+        h4 {
+          font-size: $accentFontSize;
+        }
+
+        .title span {
+          text-transform: uppercase;
+          font-weight: 500;
+          line-height: 20px;
+          font-family: 'Source Code Pro', monospace;
+          font-size: 10px;
+
+          &.large {
+            font-size: $defaultFontSize;
+          }
+        }
       }
 
       .sectionRight {
@@ -142,18 +160,22 @@ header {
         li {
           &:before {
             content: "•";
-            font-size: 16px;
-            vertical-align: middle;
-            margin-right: 5px;
+            font-size: $accentFontSize;
+            position: absolute;
+            left: 0;
           }
-          font-size: 12px;
+
+          position: relative;
+          font-size: $defaultFontSize;
           font-weight: 300;
+          padding-left: 10px;
+          line-height: 17px;
         }
       }
     }
-
   }
 }
+
 
 .clearfix {
   &:after {

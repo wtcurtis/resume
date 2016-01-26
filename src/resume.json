@@ -33,8 +33,9 @@
         "highlights": [
           "Main project was an E-Commerce system for MLM companies extending Magento and Wordpress",
           "Built and maintained the system that built client instances, from signup and initial billing to server deployment on Digital Ocean",
-          "Built the system responsible for all commission payouts. Includes multiple per-person accounts, arbitrarily configurable output to financial services, robust permissions, and full auditabilty.",
-          "The modular design of the above allowed the core transactional / account code to be re-used to build a Gift Card system."
+          "Built the system responsible for all commission payouts. Includes multiple per-person accounts, arbitrarily configurable output to financial services, robust permissions, and full auditability.",
+          "The modular design of the above allowed the core transactional / account code to be re-used to build a Gift Card system.",
+          "Built and maintained a large suite of PHPUnit / Selenium integration tests."
         ]
       },
       {
@@ -48,12 +49,12 @@
         "location": "Woodland Hills, CA",
         "keywords": [],
         "highlights": [
-          "Lead a team of 5 developers",
+          "Lead a team of 5 developers. Standardized Git (on BitBucket), project structure, build and deployment process, and coding standards.",
           "Responsible for requirements gathering, system architecture, client support, and implementation",
-          "Team performed most client work using PHP, MySQL, and SugarCRM.",
           "Personally responsible for all C# and Java projects",
           "Built and released 4 products for general release (3 PHP, 1 C#)",
-          "Performed system administration on all Linux servers (local, and on EC2)"
+          "Performed system administration on all Linux servers (local, and on EC2)",
+          "Performed all technical interviews for developer candidates"
         ]
       },
       {
@@ -79,7 +80,7 @@
         "institution": "University of Utah (S.J. Quinney School of Law)",
         "start": "2007-09",
         "end": "2010-05",
-        "summary": "CALI Excellence awards (best grade in class) in Constitutional Law and Patent Law",
+        "summary": "CALI Excellence awards (best grade in class) in Constitutional Law II and Patent Law",
         "studyType": "J.D.",
         "location": "Salt Lake City, UT"
       },
@@ -97,7 +98,32 @@
   "skills": {
     "sets": [
       {
-        "name": "Web Dev"
+        "name": "Languages",
+        "skills": [
+          "PHP 5+", "Javascript", "C#", "Typescript", "Hack", "Java",
+          "Python", "F#", "Bash"
+        ]
+      },
+      {
+        "name": "Frameworks",
+        "skills": [
+          "Laravel", "Magento", "SugarCRM", "Wordpress", "Symfony",
+          "jQuery", "React", "Bootstrap",
+          "Backbone", "Flask", "WinForms", "ASP.NET MVC 4"
+        ]
+      },
+      {
+        "name": "Systems",
+        "skills": [
+          "Ubuntu 14.04+", "Git", "nginx", "MySQL (+ Percona Server)", "HHVM",
+          "Node", "Digital Ocean", "Apache", "SQL Server 2008"
+        ]
+      },
+      {
+        "name": "Miscellany",
+        "skills": [
+          "HTML", "CSS", "vim", "PHPStorm", "Visual Studio 2010+"
+        ]
       }
     ]
   },
@@ -110,3 +136,4 @@
     }
   ]
 }
+
