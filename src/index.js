@@ -138,8 +138,6 @@ var renderSection = function(resume, elPath, header, conf) {
         if(!field) return '';
         if(typeof field === 'string') return _.get(el, field);
 
-        console.log(el);
-
         return _(field)
             .map(f => _.get(el, f, ''))
             .flatten()

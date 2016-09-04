@@ -19,7 +19,7 @@
   },
   "configs": {
     "directories": {
-      "dist": "jsonresume-theme-awesomecv",
+      "dist": "dist",
       "src": "src"
     },
     "resume": "./src/resume.json"

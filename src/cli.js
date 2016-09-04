@@ -8,8 +8,6 @@ function writeResume(resume, path) {
         if(err) {
             return console.error(err);
         }
-
-        console.log("Saved to " + path);
     });
 }
 
