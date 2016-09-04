@@ -18,6 +18,9 @@ div.sectionContainer
                     - var dateSum = getDateSummary(el.start, el.end);
                     if dateSum
                         span.date !{dateSum}
+                    - var timeSpan = getDuration(el.start, el.end, true);
+                    if(includeDuration && timeSpan)
+                        span.duration !{timeSpan}
             div.sectionMain
                 ul.notes
                     each note in el.notes

@@ -22,11 +22,29 @@
   "employment": {
     "history": [
       {
+        "position": "Senior Developer",
+        "employer": "Clearlink",
+        "summary": "",
+        "current": true,
+        "start": "2016-02",
+        "url": "https://clearlink.com",
+        "location": "Salt Lake City, UT",
+        "keywords": [],
+        "highlights": [
+          "Administered multiple Linux systems and clusters on Rackspace, AWS, and colocated at multiple providers",
+          "Set up and administered log aggregation (Graylog and elasticsearch), monitoring (icinga2), and metrics (Grafana and InfluxDB)",
+          "Helped set up (and sell to developers) modern coding standards. Included required automated testing and deployments.",
+          "Helped transition from a very large legacy PHP 5.1 - 5.3 framework-less codebase to a series of PHP 7 + Laravel services",
+          "Helped architect and build a system to properly attribute orders to marketing campaigns, including linking website visits to incoming phone calls"
+        ]
+      },
+      {
         "position": "Senior Software Developer",
         "employer": "Xennsoft, Inc.",
         "summary": "",
         "current": true,
         "start": "2014-06-02",
+        "end": "2016-02",
         "url": "https://xennsoft.com",
         "location": "Draper, UT",
         "keywords": [],

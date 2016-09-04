@@ -107,7 +107,16 @@ var getDateSummary = function(start, end) {
     return start + ' - ' + end;
 };
 
-var renderSection = function(resume, elPath, header, conf) {
+var getDuration = function(start, end) {
+    if(end === 'PRESENT' || !end) end = new Date();
+
+    var duration = utils.getDuration(start, end, true);
+    if(duration.match(/^0 day/)) return false;
+
+    return duration;
+};
+
+var renderSection = function(resume, elPath, header, conf, includeDuration) {
     var defaults = {
         headerField: 'institution',
         titleField: 'title',
@@ -118,6 +127,8 @@ var renderSection = function(resume, elPath, header, conf) {
         sectionLeftClass: '',
         getDateSummary: getDateSummary,
         splitFirstEach: splitFirstEach,
+        getDuration: getDuration,
+        includeDuration: includeDuration,
         _: _
     };
 
