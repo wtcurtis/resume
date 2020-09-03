@@ -1,71 +1,109 @@
 {
-  "name": "Wesley T. Curtis",
-  "meta": {
-    "format": "FRESH@0.6.0",
-    "version": "0.1.0"
-  },
-  "info": {
-    "label": "Software Developer",
-    "brief": "Summary goes here"
-  },
   "contact": {
     "email": "wtcurtis@gmail.com",
     "phone": "(801) 510-0291"
   },
-  "location": {
-    "city": "Salt Lake City",
-    "region": "Utah",
-    "country": "US",
-    "code": "UT 84101",
-    "address": "320 S 200 W Apt. B411"
+  "education": {
+    "history": [
+      {
+        "end": "2010-05",
+        "institution": "University of Utah (S.J. Quinney School of Law)",
+        "location": "Salt Lake City, UT",
+        "start": "2007-09",
+        "studyType": "J.D.",
+        "summary": "CALI Excellence awards (best grade in class) in Constitutional Law II and Patent Law"
+      },
+      {
+        "area": "Physics",
+        "end": "2006-05",
+        "institution": "University of Utah",
+        "location": "Salt Lake City, UT",
+        "start": "2002-09",
+        "studyType": "B.S.",
+        "summary": ""
+      }
+    ],
+    "level": ""
   },
   "employment": {
     "history": [
       {
-        "position": "Senior Developer",
-        "employer": "Clearlink",
-        "summary": "",
         "current": true,
-        "start": "2016-02",
-        "url": "https://clearlink.com",
-        "location": "Salt Lake City, UT",
+        "employer": "Clearlink",
+        "highlights": [
+          "Technical leader across the entire organization, expected to consult with and guide technical decisions for all technical teams.",
+          "Led AWS / infrastructure strategy, tooling / language / framework decisions, team structure, and development standards",
+          "Managed the AWS infrastructure and process for a team of 15 developers running ~20 individual services",
+          "Evangelized a Devops culture with infrastructure as code and containerized applications across the board",
+          "Built standardized system for containerized services, including CI / CD, manual approvals, secrets management, autoscaling, monitoring, Docker-based local development",
+          "Built many shared internal libraries used by multiple systems",
+          "Built the infrastructure for the next-generation CMS based on static site generation. Used Cloudfront, S3, lambda@edge, and ECS"
+        ],
         "keywords": [],
+        "location": "Salt Lake City, UT",
+        "position": "Principal Engineer",
+        "start": "2019-03",
+        "summary": "",
+        "url": "https://clearlink.com"
+      },
+      {
+        "current": false,
+        "employer": " ",
+        "end": "2019-03",
+        "highlights": [
+          "Responsible for architecting a move from Rackspace / colocated servers to AWS",
+          "Built a CI / CD system used by a large team of developers to deploy all internally developed websites. Included automated rollbacks. Jenkins / Ansible.",
+          "Built an internal tool to replace a phone number rotation vendor, saving more than $1M a year",
+          "Set up and enforced required coding standards across multiple teams: required code reviews, automated testing, linting",
+          "Greatly improved security consciousness: Discovered and remediated many vulnerabilities, from CVE image scanners (Clair), to application-level problems (various injections, XSS), to network segmentation. Enforced severely restricted production access"
+        ],
+        "keywords": [],
+        "location": "",
+        "position": "Lead Software Engineer",
+        "start": "2016-12",
+        "summary": "",
+        "url": "https://clearlink.com"
+      },
+      {
+        "current": false,
+        "employer": "",
+        "end": "2016-12",
         "highlights": [
           "Administered multiple Linux systems and clusters on Rackspace, AWS, and colocated at multiple providers",
           "Set up and administered log aggregation (Graylog and elasticsearch), monitoring (icinga2), and metrics (Grafana and InfluxDB)",
           "Helped set up (and sell to developers) modern coding standards. Included required automated testing and deployments.",
           "Helped transition from a very large legacy PHP 5.1 - 5.3 framework-less codebase to a series of PHP 7 + Laravel services",
           "Helped architect and build a system to properly attribute orders to marketing campaigns, including linking website visits to incoming phone calls"
-        ]
+        ],
+        "keywords": [],
+        "location": "",
+        "position": "Senior Developer",
+        "start": "2016-02",
+        "summary": "",
+        "url": "https://clearlink.com"
       },
       {
-        "position": "Senior Software Developer",
+        "current": false,
         "employer": "Xennsoft, Inc.",
-        "summary": "",
-        "current": true,
-        "start": "2014-06-02",
         "end": "2016-02",
-        "url": "https://xennsoft.com",
-        "location": "Draper, UT",
-        "keywords": [],
         "highlights": [
           "Main project was an E-Commerce system for MLM companies extending Magento and Wordpress",
           "Built and maintained the system that built client instances, from signup and initial billing to server deployment on Digital Ocean",
           "Built the system responsible for all commission payouts. Includes multiple per-person accounts, arbitrarily configurable output to financial services, robust permissions, and full auditability.",
           "The modular design of the above allowed the core transactional / account code to be re-used to build a Gift Card system.",
           "Built and maintained a large suite of PHPUnit / Selenium integration tests."
-        ]
+        ],
+        "keywords": [],
+        "location": "Draper, UT",
+        "position": "Senior Software Developer",
+        "start": "2014-06-02",
+        "summary": "",
+        "url": "https://xennsoft.com"
       },
       {
-        "position": "Lead Software Developer",
-        "employer": "Faye Business Systems Group",
-        "summary": "",
         "current": false,
-        "start": "2010-11",
+        "employer": "Faye Business Systems Group",
         "end": "2014-06",
-        "url": "https://fayebsg.com",
-        "location": "Woodland Hills, CA",
-        "keywords": [],
         "highlights": [
           "Lead a team of 5 developers. Standardized Git (on BitBucket), project structure, build and deployment process, and coding standards.",
           "Responsible for requirements gathering, system architecture, client support, and implementation",
@@ -73,74 +111,101 @@
           "Built and released 4 products for general release (3 PHP, 1 C#)",
           "Performed system administration on all Linux servers (local, and on EC2)",
           "Performed all technical interviews for developer candidates"
-        ]
+        ],
+        "keywords": [],
+        "location": "Woodland Hills, CA",
+        "position": "Lead Software Developer",
+        "start": "2010-11",
+        "summary": "",
+        "url": "https://fayebsg.com"
       },
       {
         "employer": "Roosters",
-        "position": "Server",
-        "start": "2007-12",
         "end": "2010-11",
-        "location": "Layton, UT"
+        "location": "Layton, UT",
+        "position": "Server",
+        "start": "2007-12"
       },
       {
         "employer": "Famous Dave's",
-        "position": "Server / Bartender",
-        "start": "2004-12",
         "end": "2007-12",
-        "location": "Layton, UT"
+        "location": "Layton, UT",
+        "position": "Server / Bartender",
+        "start": "2004-12"
       }
     ]
   },
-  "education": {
-    "level": "",
-    "history": [
-      {
-        "institution": "University of Utah (S.J. Quinney School of Law)",
-        "start": "2007-09",
-        "end": "2010-05",
-        "summary": "CALI Excellence awards (best grade in class) in Constitutional Law II and Patent Law",
-        "studyType": "J.D.",
-        "location": "Salt Lake City, UT"
-      },
-      {
-        "institution": "University of Utah",
-        "start": "2002-09",
-        "end": "2006-05",
-        "summary": "",
-        "area": "Physics",
-        "studyType": "B.S.",
-        "location": "Salt Lake City, UT"
-      }
-    ]
+  "info": {
+    "brief": "Summary goes here",
+    "label": "Software Developer"
   },
+  "location": {
+    "address": "285 E Belmont Ave",
+    "city": "Salt Lake City",
+    "code": "UT 84111",
+    "country": "US",
+    "region": "Utah"
+  },
+  "meta": {
+    "format": "FRESH@0.6.0",
+    "version": "0.1.0"
+  },
+  "name": "Wesley T. Curtis",
   "skills": {
     "sets": [
       {
         "name": "Languages",
         "skills": [
-          "PHP 5+", "Javascript", "C#", "Typescript", "Hack", "Java",
-          "Python", "F#", "Bash"
+          "PHP 5+",
+          "Javascript",
+          "C#",
+          "Typescript",
+          "Hack",
+          "Java",
+          "Python",
+          "F#",
+          "Bash"
         ]
       },
       {
         "name": "Frameworks",
         "skills": [
-          "Laravel", "Magento", "SugarCRM", "Wordpress", "Symfony",
-          "jQuery", "React", "Bootstrap",
-          "Backbone", "Flask", "WinForms", "ASP.NET MVC 4"
+          "Laravel",
+          "Magento",
+          "SugarCRM",
+          "Wordpress",
+          "Symfony",
+          "jQuery",
+          "React",
+          "Bootstrap",
+          "Backbone",
+          "Flask",
+          "WinForms",
+          "ASP.NET MVC 4"
         ]
       },
       {
         "name": "Systems",
         "skills": [
-          "Ubuntu 14.04+", "Git", "nginx", "MySQL (+ Percona Server)", "HHVM",
-          "Node", "Digital Ocean", "Apache", "SQL Server 2008"
+          "Ubuntu 14.04+",
+          "Git",
+          "nginx",
+          "MySQL (+ Percona Server)",
+          "HHVM",
+          "Node",
+          "Digital Ocean",
+          "Apache",
+          "SQL Server 2008"
         ]
       },
       {
         "name": "Miscellany",
         "skills": [
-          "HTML", "CSS", "vim", "PHPStorm", "Visual Studio 2010+"
+          "HTML",
+          "CSS",
+          "vim",
+          "PHPStorm",
+          "Visual Studio 2010+"
         ]
       }
     ]
@@ -149,9 +214,8 @@
     {
       "label": "GitHub",
       "network": "GitHub",
-      "user": "wtcurtis",
-      "url": "https://github.com/wtcurtis"
+      "url": "https://github.com/wtcurtis",
+      "user": "wtcurtis"
     }
   ]
 }
-

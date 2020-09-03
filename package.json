@@ -4,6 +4,9 @@
   "license": "MIT",
   "version": "0.0.1",
   "main": "index.js",
+  "scripts": {
+    "build": "gulp"
+  },
   "devDependencies": {
     "run-sequence": "latest",
     "node-sass": ">= 3.4.2",

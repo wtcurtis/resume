@@ -6,8 +6,15 @@ $mediumFontSize: 24px;
 $hugeFontSize: 48px;
 //$highlight: #4b68ff;
 
+@import url('https://fonts.googleapis.com/css2?family=Mulish:wght@100;200;300;400&family=Montserrat:ital,wght@0,100;0,200;0,400;0,500;1,200&display=swap&family=Raleway:wght@300;400');
+
+
 body {
-  font-family: 'Roboto', serif
+  font-family: 'Mulish', serif;
+  font-family: 'Roboto', serif;
+  font-family: 'Montserrat', serif;
+  font-family: 'Raleway', serif;
+  font-weight: 300;
 }
 
 body * {
@@ -22,6 +29,10 @@ body * {
 }
 
 header {
+  * {
+    font-family: 'Montserrat';
+  }
+
   ul {
     margin-top: 4px;
     li {
@@ -102,6 +113,8 @@ header {
     }
 
     .sectionTop {
+      font-family: 'Montserrat';
+
       .sectionLeft {
         float: left;
         width: 70%;
@@ -160,7 +173,7 @@ header {
         li {
           &:before {
             content: "•";
-            font-size: $accentFontSize;
+            //font-size: 24px;
             position: absolute;
             left: 0;
           }

@@ -11,16 +11,6 @@ html
         != renderHeader(r)
         div(id='main')
             -
-                var skillsConf = {
-                    headerField: "name",
-                    titleField: ['skills'],
-                    titleSep: ' • ',
-                    sectionLeftClass: 'full-width',
-                    sectionClass: 'condensed'
-                };
-            != renderSection(r, 'skills.sets', 'Skills', skillsConf)
-
-            -
                 var empConf = {
                     headerField: 'employer',
                     titleField: 'position'
